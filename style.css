@@ -472,12 +472,10 @@ width: 100%;
 /* the tall wrapper — gives the scroll its room to work */
 #stack-wrapper {
     height: 400vh;
-    /* 3x screen height, increase to slow the reveal down */
+    /* 4x screen height, increase to slow the reveal down */
     position: relative;
-    overflow-x: hidden;
 }
 
-/* sticks in place while the wrapper scrolls past */
 #stack-sticky {
     position: sticky;
     top: 0;
@@ -485,14 +483,14 @@ width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 /* the container that holds all three images */
 #stack-inner {
     position: relative;
-    width: 600px;
-    /* adjust to your image size */
-    height: 480px;
+    width: min(600px, 90vw);
+    height: min(480px, 72vw);
     display: flex;
     justify-content: center;
     align-items: center;

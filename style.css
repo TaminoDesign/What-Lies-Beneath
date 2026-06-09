@@ -62,6 +62,15 @@ p {
     line-height: 1;
 }
 
+@media  (max-width: 800px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    h2 {
+        font-size: 2.5em;
+    }
+}
+
 /* FONTS USED UNDER LICENSE */
 
 button {
@@ -225,6 +234,18 @@ header {
     width: auto;
 }
 
+@media  (max-width: 800px) {
+    .nav {
+        flex-direction: column;
+    }
+
+    .logo img {
+    height: 70px;
+    width: auto;
+    padding-bottom: 10px;
+}
+}
+
 .heading {
     height: 100vh;
     width: 100%;
@@ -246,6 +267,7 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .headingFirstRow img,
@@ -266,6 +288,25 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+
+@media  (max-width: 800px) {
+    .headingFirstRow img,
+.headingSecondRow img,
+.headingThirdRow img,
+.headingThrthRow img {
+    width: 60px;
+    height: auto;
+}
+.headingThirdRow {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.heading {
+    background-position: bottom;
+    background-size: 100vh;
+    background-repeat: no-repeat;
+}
 }
 
 section {
@@ -327,6 +368,80 @@ footer {
     text-align: right;
 }
 
+@media  (max-width: 800px) {
+    footer {
+    flex-direction: column;
+}
+}
+
+/* MOBILE FOOTER */
+
+.mobileFooter {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+width: 100%;
+}
+
+.footerLogoMobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.footerLogoMobile img {
+    width: 90%;
+    padding: 20px;
+}
+
+.footerNewsMobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding-bottom: 20px;
+    width: 100%;
+   margin: 20px;
+}
+
+.footerNewsMobile h3 {
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+.footerSponsoredMobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.footerSponsoredMobile h3 {
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+.footerSponsoredMobile p {
+    text-align: left;
+}
+
+@media  (max-width: 900px) {
+    .desktopFooter {
+    display: none;
+}
+}
+
+@media (min-width: 901px) {
+    .mobileFooter {
+        display: none;
+    }
+}
+
 .introContent {
     margin: 40px;
     background-color: #1C3C65;
@@ -344,6 +459,12 @@ footer {
     padding-bottom: 40px;
 }
 
+@media  (max-width: 800px) {
+.introContent {
+    padding: 20px;
+}
+}
+
 .introContent h2 {
     text-align: left;
 }
@@ -353,6 +474,7 @@ footer {
     height: 400vh;
     /* 3x screen height, increase to slow the reveal down */
     position: relative;
+    overflow-x: hidden;
 }
 
 /* sticks in place while the wrapper scrolls past */
@@ -444,6 +566,17 @@ footer {
     height: auto;
 }
 
+@media  (max-width: 800px) {
+.locations {
+    flex-direction: column;
+}
+.locationsLeft,
+.locationsRight {
+    width: 100%;
+    padding: 0px;
+}
+}
+
 /* Form */
 
 form {
@@ -471,25 +604,28 @@ form > div:last-of-type {
 
 form input,
 form textarea {
-    padding: 5px 12px;
+    padding: 20px 32px;
     outline: none;
     border: 1px solid rgba(0, 0, 0, 0);
     width: 80%;
     color: #000000;
     font-size: 0.9em;
-    background-color: rgba(255, 255, 255, .4);
+    background-color: #1C3C65;
 }
 
 form input[type="submit"] {
-    width: auto;
-    padding: 5px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #1C3C65;
+    border: solid 0;
     cursor: pointer;
-    font-size: 0.8em;
-    color: #fff;
-    border: 1px solid #fff;
-    background-color: #598234;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    text-decoration: none;
+    color: #FFFCEA;
+    width: 200px;
+    border-radius: 0px;
 }
 
 label {
@@ -508,37 +644,17 @@ form input[type="checkbox"] + label {
     font-style: normal;
 }
 
-/* Rule for input fields that have a required attribute */
-
-input:required {
-    border: 1px solid #598234;
-}
-
-/* Target the lable element that appears after an input field that has a required attibute */
-
-input:required + label {
-    color: #598234;
-}
-
 /* Adding a pseudo-element (*) after each of the required labels */
 
-input:required + label::after {
+input:required {
     content: 'required';
     font-style: italic;
     padding-left: 10px;
     font: 0.8em;
 }
 
-input:required + label::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -25px;
-    display: block;
-    width: 20px;
-    height: 40px;
-    background: url("images/favicon.png") no-repeat 0 0;
-    background-size: contain;
+form p {
+    margin-bottom: 20px;
 }
 
 /* Image slideshow */
@@ -571,15 +687,6 @@ input:required + label::before {
     right: 0;
 }
 
-/* Number text 1 / 5 */
-.numbertext {
-    color: #f2f2f2;
-    font-size: 1em;
-    padding: 8px;
-    position: absolute;
-    top: 0;
-}
-
 /* hide large images by default use JS  */
 .mySlides {
     display: none;
@@ -601,4 +708,71 @@ input:required + label::before {
     justify-content: center;
     margin-bottom: 60px;
     margin-top: 60px;
+}
+
+.exhibitionImageRight {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.exhibitionImageRight img {
+    width: 45%;
+    padding-left: 20px;
+}
+
+.exhibitionImageLeft {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.exhibitionImageLeft img {
+    width: 45%;
+    padding-right: 20px;
+}
+
+@media  (max-width: 800px) {
+    .exhibitionImageLeft {
+        flex-direction: column;
+    }
+    .exhibitionImageRight {
+        flex-direction: column;
+            justify-content: center;
+    align-items: center;
+    }
+    .exhibitionImageRight img {
+    width: 100%;
+    padding: 40px 0px 0px 0px;
+}
+    .exhibitionImageLeft {
+        flex-direction: column;
+                    justify-content: center;
+    align-items: center;
+    }
+    .exhibitionImageLeft img {
+    width: 100%;
+    padding: 0px 0px 40px 0px;
+}
+
+.next,
+.prev {
+    cursor: pointer;
+    position: absolute;
+    top: 100px;
+    width: auto;
+    padding: 20px;
+    margin-top: 0;
+    -webkit-user-select: none;
+}
 }

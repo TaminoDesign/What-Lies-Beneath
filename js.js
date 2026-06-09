@@ -8,7 +8,7 @@ const audioPrompt = document.getElementById('audio-prompt');
 const resumeBtn = document.getElementById('resume-btn');
 const wrapper = document.getElementById('stack-wrapper');
 
-// ── LOADING SCREEN — only runs if these elements exist on this page ──
+// LOADING SCREEN — only runs if these elements exist on this page
 if (audio && loadingScreen) {
     if (sessionStorage.getItem('audioConfirmed')) {
         loadingScreen.style.display = 'none';
@@ -52,7 +52,7 @@ if (audio && loadingScreen) {
     }
 }
 
-// ── MUTE BUTTON ──
+// MUTE BUTTON
 if (muteBtn && audio) {
     muteBtn.addEventListener('click', () => {
         audio.muted = !audio.muted;
@@ -69,7 +69,7 @@ if (muteBtn && audio) {
     );
 }
 
-// ── FIREFOX RESUME PROMPT ──
+// FIREFOX RESUME
 if (resumeBtn && audioPrompt && audio) {
     resumeBtn.addEventListener('click', () => {
         audio.play();
@@ -77,7 +77,7 @@ if (resumeBtn && audioPrompt && audio) {
     });
 }
 
-// ── IMAGE CARD STACK — only runs if the wrapper exists on this page ──
+// IMAGE CARD STACK — only runs if the wrapper exists on this page
 if (wrapper) {
     const imgs = [...document.querySelectorAll('.stack-img')];
     const total = imgs.length;
@@ -106,7 +106,7 @@ if (wrapper) {
     });
 }
 
-// ── ACCORDION ──
+// ACCORDION
 const acc = document.getElementsByClassName('accordion');
 for (let i = 0; i < acc.length; i++) {
     acc[i].addEventListener('click', function () {

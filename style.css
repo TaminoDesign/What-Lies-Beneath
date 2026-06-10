@@ -262,7 +262,7 @@ header {
 .headingFirstRow,
 .headingSecondRow,
 .headingThirdRow,
-.headingThrthRow {
+.headingFourthRow {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -273,7 +273,7 @@ header {
 .headingFirstRow img,
 .headingSecondRow img,
 .headingThirdRow img,
-.headingThrthRow img {
+.headingFourthRow img {
     width: 120px;
     height: auto;
 }
@@ -294,7 +294,7 @@ header {
     .headingFirstRow img,
 .headingSecondRow img,
 .headingThirdRow img,
-.headingThrthRow img {
+.headingFourthRow img {
     width: 60px;
     height: auto;
 }
@@ -382,19 +382,17 @@ footer {
     height: auto;
     align-items: center;
     justify-content: center;
-width: 100%;
+    margin: 30px;
 }
 
 .footerLogoMobile {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
 }
 
 .footerLogoMobile img {
     width: 90%;
-    padding: 20px;
 }
 
 .footerNewsMobile {
@@ -403,8 +401,7 @@ width: 100%;
     justify-content: space-between;
     align-items: start;
     padding-bottom: 20px;
-    width: 100%;
-   margin: 20px;
+   width: 100%;
 }
 
 .footerNewsMobile h3 {
@@ -564,7 +561,7 @@ width: 100%;
     height: auto;
 }
 
-@media  (max-width: 800px) {
+@media  (max-width: 1000px) {
 .locations {
     flex-direction: column;
 }

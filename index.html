@@ -13,6 +13,7 @@
 
     <body class="no-scroll">
         <audio src="Assets/backgroundMusic.mp3" id="bg-music" loop="loop"></audio>
+        <audio id="click-sound" src="Assets/buttonClick.mp3"></audio>
         <div class="loading" id="loading">
             <h1>
                 What<br>Lies<br>Beaneath
@@ -20,8 +21,10 @@
             <div class="loadingButtons">
                 <button id="mute">
                     <p>Mute Sound</p><img src="Assets/Images/MusicNote.png" alt=""></button>
-                <button id="continue">
-                    <p>Continue</p><img src="Assets/Images/Arrow.png" alt=""></button>
+                <button class="sound-btn" id="continue">
+                    <p>Enter Exhibition</p>
+                    <img src="Assets/Images/Arrow.png" alt="">
+                </button>
             </div>
         </div>
 
@@ -60,7 +63,7 @@
                 <div class="headingThirdRow">
                     <h1>and learn about the</h1>
                 </div>
-                <div class="headingThrthRow">
+                <div class="headingFourthRow">
                     <h1>people</h1>
                     <a href="artists.html"><img src="Assets/Images/artisitForHero.png" alt=""></a>
                     <h1>beneath.</h1>
@@ -204,9 +207,9 @@
             <div class="footerLogoMobile">
                 <img src="Assets/Images/logoWithoutText.png" alt="">
             </div>
-                            <div>
-                    <p>© 2026 What Lies Beaneath/Janosch Hussain</p>
-                </div>
+            <div>
+                <p>© 2026 What Lies Beaneath/Janosch Hussain</p>
+            </div>
         </footer>
 
         <footer class="desktopFooter">
@@ -240,6 +243,8 @@
             </div>
         </footer>
 
+        <script src="GASPanimation/gsap.min.js"></script>
+        <script src="GASPanimation/ScrollTrigger.min.js"></script>
         <script src="js.js"></script>
     </body>
 </html>

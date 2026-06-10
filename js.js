@@ -182,3 +182,36 @@ window.onload = function () {
         showSlides();
     }
 };
+
+
+// GSAP animations
+document.addEventListener("DOMContentLoaded", (event) => {
+                gsap.from('.headingFirstRow, .headingSecondRow, .headingThirdRow, .headingFourthRow', {
+                opacity: 0,
+                y: 40,
+                duration: 1,
+                ease: 'power2.out'
+            })
+
+
+            gsap.registerPlugin(ScrollTrigger);
+
+gsap.from('.introText', {
+  opacity: 0,
+  y: 90,
+  duration: 1,
+  scrollTrigger: '.introText' // starts when this element enters the viewport
+});
+            });
+
+
+const clickSound = document.getElementById('click-sound');
+
+document.querySelectorAll('.sound-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (clickSound) {
+      clickSound.currentTime = 0;
+      clickSound.play();
+    }
+  });
+});
